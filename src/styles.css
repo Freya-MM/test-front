@@ -1,1 +1,280 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-300 {
+  font-weight: 300 !important;
+}
+
+.font-500 {
+  font-weight: 500 !important;
+}
+
+.font-700 {
+  font-weight: 700 !important;
+}
+
+.logo {
+  width: 130px;
+}
+
+.btn-filter button {
+  background-color: #00000099;
+  color: white;
+  border: 3px solid #6B63B5;
+  margin: 0 5px;
+  padding: 5px 0;
+  width: 146px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 15px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.btn-filter button:hover {
+  background-color: #6B63B599;
+}
+
+.btn-active {
+  background-color: #6B63B5 !important;
+}
+
+.gryffindor {
+  background: -webkit-gradient(linear, left top, right top, from(red), to(#fed482));
+  background: linear-gradient(90deg, red 0%, #fed482 100%);
+}
+
+.card-character .card-image {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card-character .character-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-image: url("img/harry-potter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-character .card-description {
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.card-character .card-description .character-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 9px;
+}
+
+.card-character .card-description .character-status p {
+  font-size: 13px;
+  padding-right: 15px;
+  margin: 0;
+}
+
+.card-character .card-description .character-status .fa-bookmark, .card-character .card-description .character-status p {
+  color: #999999;
+}
+
+.card-character .card-description .character-status .fa-bookmark {
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.card-character .card-description .character-status .fa-bookmark:hover {
+  color: #4e4e4e;
+}
+
+.card-character .character-name {
+  padding-top: 11px;
+}
+
+.sub-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 285px;
+  height: 40px;
+  color: white;
+  text-align: center;
+}
+
+.sub-menu div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background-color: #6B63B5;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.sub-menu div:hover {
+  background-color: #4b4583;
+}
+
+.sub-menu div:first-child {
+  border-right: 1px solid #4b4583;
+  border-radius: 10px 0 0 0;
+}
+
+.sub-menu div:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.sub-menu p {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sub-menu .fas {
+  padding-left: 5px;
+}
+
+.character-desc {
+  display: none !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .btn-filter button {
+    width: 235px;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+  .btn-filter button:first-child {
+    margin-right: 76px;
+  }
+  .sub-menu {
+    height: 33px;
+    width: 264px;
+  }
+  .sub-menu p {
+    font-size: 13px;
+  }
+  .card-character {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-character .card-image {
+    width: 40%;
+    border-radius: 16px 0 0 16px;
+  }
+  .card-character .card-description {
+    width: 60%;
+    border-radius: 0 16px 16px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+  }
+  .card-character .card-description .character-status {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .card-character .card-description .card-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 15px;
+  }
+  .card-character .card-description .card-text p {
+    text-align: start !important;
+    font-size: 20px;
+  }
+  .card-character .card-description .card-text .character-desc p {
+    font-size: 13px;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+  .card-character .character-desc {
+    display: block !important;
+    color: #374A59;
+  }
+  .card-image {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card-image .character-img {
+    width: 130px;
+    height: 130px;
+  }
+  .sub-menu {
+    top: 0;
+    -webkit-transform: none;
+            transform: none;
+    right: 8%;
+    left: initial;
+  }
+  .sub-menu div:first-child {
+    border-radius: 0 0 0 10px;
+  }
+  .sub-menu div:last-child {
+    border-radius: 0 0 10px 0;
+  }
+  .header {
+    padding-top: 70px;
+  }
+  .header .logo {
+    width: 170px;
+  }
+  .header p {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding-top: 85px;
+  }
+  body {
+    background-image: url("img/Wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

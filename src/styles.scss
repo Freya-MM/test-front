@@ -1,2 +1,238 @@
-//Colors
-$background: #222222; 
+//Variables
+$black: #141414; 
+$purple: #6B63B5;
+$dark-puple: #4b4583;
+$light-purple: #6B63B599;
+$btn-black: #00000099;
+$gray: #999999;
+$gray-hover: #4e4e4e;
+$gray-tx-desc: #374A59;
+$gryffindor: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(254,212,130,1) 100%);
+$font-300: 300;
+$font-500: 500;
+$font-700: 700;
+
+//Classes movile first
+body{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.font-300{
+    font-weight: 300!important;
+}
+.font-500{
+    font-weight: 500!important;
+}
+.font-700{
+    font-weight: 700!important;
+}
+.logo{
+    width: 130px;
+}
+.btn-filter{
+    button{
+        background-color: $btn-black;
+        color: white;
+        border: 3px solid $purple;
+        margin: 0 5px;
+        padding: 5px 0;
+        width: 146px;
+        font-weight: $font-300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 15px;
+        transition: .3s linear;
+    }
+    button:hover{
+        background-color: $light-purple;
+    }
+}
+.btn-active{
+    background-color: $purple!important;
+}
+.gryffindor{
+    background: $gryffindor;
+}
+.card-character{
+    .card-image{
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .character-img{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background-image: url('img/harry-potter.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .card-description{
+        background-color: white;
+        padding: 0 10px;
+        border-radius: 0px 0px 5px 5px;
+        .character-status{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 9px;
+            p{
+                font-size: 13px;
+                padding-right: 15px;
+                margin: 0;
+            }
+            .fa-bookmark, p{
+                color: $gray;
+            }
+            .fa-bookmark{
+                cursor: pointer;
+                transition: .3s linear;
+            }
+            .fa-bookmark:hover{
+                color: $gray-hover;
+            }
+        }
+    }
+    .character-name{
+        padding-top: 11px;
+    }
+}
+.sub-menu{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 285px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    div{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: $purple;
+        transition: .3s linear;
+    }
+    div:hover{
+        background-color: $dark-puple;
+    }
+    div:first-child{
+        border-right: 1px solid $dark-puple;
+        border-radius: 10px 0 0 0;
+    }
+    div:last-child{
+        border-radius: 0 10px 0 0;
+    }
+    p{
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .fas{
+        padding-left: 5px;
+    }
+}
+.character-desc{
+    display: none!important;
+}
+
+//Media Queries - Breakpoints
+@media only screen and (min-width: 992px) {
+    .btn-filter{
+        button{
+            width: 235px;
+            padding: 10px 0;
+            font-size: 13px;
+        }
+        button:first-child{
+            margin-right: 76px;
+        }
+    }
+    .sub-menu{
+        height: 33px;
+        width: 264px;
+        p{
+            font-size: 13px;
+        }
+    }
+    .card-character{
+        display: flex;
+        .card-image{
+            width: 40%;
+            border-radius: 16px 0 0 16px;
+        } 
+        .card-description{
+            width: 60%;
+            border-radius: 0 16px 16px 0;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            .character-status{
+                order: 1;
+                padding-top: 15px;
+                padding-bottom: 5px;
+            }
+            .card-text{
+                order: 2;
+                padding-bottom: 15px;
+                p{
+                    text-align: start!important;
+                    font-size: 20px;
+                }
+                .character-desc p{
+                    font-size: 13px;
+                    margin: 0;
+                    padding-bottom: 4px;
+                }
+            }
+        }
+        .character-desc{
+            display: block!important;
+            color: $gray-tx-desc;
+        }
+    }
+    .card-image{
+        align-items: center;
+        .character-img{
+            width: 130px;
+            height: 130px;
+        }
+    }
+    .sub-menu{
+        top: 0;
+        transform: none;
+        right: 8%;
+        left: initial;
+        div:first-child{
+            border-radius: 0 0 0 10px;
+        }
+        div:last-child{
+            border-radius: 0 0 10px 0;
+        }
+    }
+    .header{
+        padding-top: 70px;
+        .logo{
+            width: 170px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+}
+@media only screen and (min-width: 1200px){
+    .header{
+        padding-top: 85px;
+    }
+    body{
+        background-image: url('img/Wallpaper.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 100%;
+        height: auto;
+    }
+}
