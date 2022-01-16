@@ -19,7 +19,7 @@ body {
   width: 130px;
 }
 
-.btn-filter button {
+.btn-style button {
   background-color: #00000099;
   color: white;
   border: 3px solid #6B63B5;
@@ -34,7 +34,7 @@ body {
   transition: .3s linear;
 }
 
-.btn-filter button:hover {
+.btn-style button:hover {
   background-color: #6B63B599;
 }
 
@@ -45,6 +45,21 @@ body {
 .gryffindor {
   background: -webkit-gradient(linear, left top, right top, from(red), to(#fed482));
   background: linear-gradient(90deg, red 0%, #fed482 100%);
+}
+
+.slytherin {
+  background: -webkit-gradient(linear, left top, right top, from(#1c792b), to(#82e95e));
+  background: linear-gradient(90deg, #1c792b 0%, #82e95e 100%);
+}
+
+.ravenclawhupp {
+  background: -webkit-gradient(linear, left top, right top, from(#0597b7), to(#66d1ff));
+  background: linear-gradient(90deg, #0597b7 0%, #66d1ff 100%);
+}
+
+.hufflepuff {
+  background: -webkit-gradient(linear, left top, right top, from(#ffc700), to(#fff388));
+  background: linear-gradient(90deg, #ffc700 0%, #fff388 100%);
 }
 
 .card-character .card-image {
@@ -169,13 +184,93 @@ body {
   display: none !important;
 }
 
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalheader p {
+  margin: 0;
+}
+
+.modal-content label {
+  font-size: 13px;
+}
+
+.modal-content input {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  background-color: #f5f7f9;
+  color: #7a7c7e;
+  font-size: 13px;
+}
+
+.modal .btn-style button {
+  margin-right: 0 !important;
+}
+
+@media only screen and (min-width: 839px) {
+  .modal-content {
+    width: 670px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
-  .btn-filter button {
+  .btn-style button {
     width: 235px;
     padding: 10px 0;
     font-size: 13px;
   }
-  .btn-filter button:first-child {
+  .btn-style button:first-child {
     margin-right: 76px;
   }
   .sub-menu {

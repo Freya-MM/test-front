@@ -17,7 +17,7 @@ function Filter() {
               </div>
               <div className="character-status">
                   <p>Vivo / Estudiante</p>
-                  <i class="far fa-bookmark fa-lg"></i>
+                  <i className="far fa-bookmark fa-lg"></i>
               </div>
           </div>
       </div>

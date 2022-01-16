@@ -3,8 +3,10 @@ import Header from "./components/Header"
 import Filter from "./components/Filter"
 import Character from "./components/Character"
 import Submenu from "./components/Submenu"
+import Modal from "./components/Modal"
 
 function App() {
+  const [modal, setModal] = useState(false)
 
   return (
     <div className='mb-5'>
@@ -24,7 +26,10 @@ function App() {
           </div>
         </div>
       </div>
-      <Submenu/>
+      <Submenu
+        setModal={setModal}
+      />
+      {modal && <Modal setModal={setModal}/>} 
     </div>
   )
 }

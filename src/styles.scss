@@ -7,7 +7,11 @@ $btn-black: #00000099;
 $gray: #999999;
 $gray-hover: #4e4e4e;
 $gray-tx-desc: #374A59;
+$died-color: #CCCCCC;
 $gryffindor: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(254,212,130,1) 100%);
+$slytherin: linear-gradient(90deg, rgba(28,121,43,1) 0%, rgba(130,233,94,1) 100%);
+$ravenclaw: linear-gradient(90deg, rgba(5,151,183,1) 0%, rgba(102,209,255,1) 100%);
+$hufflepuff: linear-gradient(90deg, rgba(255,199,0,1) 0%, rgba(255,243,136,1) 100%);
 $font-300: 300;
 $font-500: 500;
 $font-700: 700;
@@ -29,7 +33,7 @@ body{
 .logo{
     width: 130px;
 }
-.btn-filter{
+.btn-style{
     button{
         background-color: $btn-black;
         color: white;
@@ -52,6 +56,15 @@ body{
 }
 .gryffindor{
     background: $gryffindor;
+}
+.slytherin{
+    background: $slytherin;
+}
+.ravenclawhupp{
+    background: $ravenclaw;
+}
+.hufflepuff{
+    background: $hufflepuff;
 }
 .card-character{
     .card-image{
@@ -139,10 +152,73 @@ body{
 .character-desc{
     display: none!important;
 }
+.modal{
+    //display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close{
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        margin: 0;
+    }
+}
+.modal-content{
+    label{
+        font-size: 13px;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        background-color: #f5f7f9;
+        color: #7a7c7e;
+        font-size: 13px;
+    }
+}
+.modal{
+    .btn-style button{
+        margin-right: 0!important;
+    }
+}
 
 //Media Queries - Breakpoints
+@media only screen and (min-width: 839px){
+    .modal-content{
+        width: 670px;
+    }
+}
 @media only screen and (min-width: 992px) {
-    .btn-filter{
+    .btn-style{
         button{
             width: 235px;
             padding: 10px 0;
