@@ -26,7 +26,8 @@ function Modal({setModal}) {
     })
 
     const handleSubmit = async (values) => {
-        console.log(values)
+        values.photo = 'http://hp-api.herokuapp.com/images/'+values.photo.name
+
         try {
             const url = 'http://localhost:4000/characters'
 
@@ -116,7 +117,7 @@ function Modal({setModal}) {
                                     <label htmlFor="hair_color" className="form-label text-uppercase">Género</label>
                                     <div className="d-flex">
                                         <div className="form-check col-6">
-                                            <Field className="form-check-input" type="radio" name="gender" id="female" value="Mujer" checked/>
+                                            <Field className="form-check-input" type="radio" name="gender" id="female" value="Mujer" />
                                             <label className="form-check-label" htmlFor="female">
                                                 Mujer
                                             </label>
@@ -133,7 +134,7 @@ function Modal({setModal}) {
                                     <label htmlFor="hair_color" className="form-label text-uppercase">Posición</label>
                                     <div className="d-flex">
                                         <div className="form-check col-6">
-                                            <Field className="form-check-input" type="radio" name="position" id="student" value="Estudiante" checked/>
+                                            <Field className="form-check-input" type="radio" name="position" id="student" value="Estudiante" />
                                             <label className="form-check-label" htmlFor="student">
                                                 Estudiante
                                             </label>
@@ -148,8 +149,7 @@ function Modal({setModal}) {
                                 </div>
                                 <div className="mt-2 mb-4 col-12">
                                     <label htmlFor="photo" className="form-label text-uppercase">Fotografía</label>
-                                    <input className="form-control" type="file" id="photo" name="photo" value={selectedFile} onChange={event => setFieldValue('photo', event.currentTarget.files[0])}
-/>
+                                    <input className="form-control" type="file" id="photo" name="photo" value={selectedFile} onChange={event => setFieldValue('photo', event.currentTarget.files[0])} />
                                     {errors.photo && touched.photo ? (
                                         <div className='error-feedback'>{errors.photo}</div>
                                     ) : null }

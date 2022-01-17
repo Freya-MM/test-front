@@ -184,6 +184,34 @@ body {
   padding-left: 5px;
 }
 
+.sub-menu-btn {
+  z-index: 1;
+}
+
+.menu-fav {
+  position: fixed;
+  bottom: 0;
+  height: 300px;
+  z-index: 0;
+  width: 100% !important;
+}
+
+.menu-fav div {
+  border: none !important;
+}
+
+.menu-fav .favcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
 .character-desc {
   display: none !important;
 }

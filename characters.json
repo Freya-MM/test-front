@@ -1,17 +1,108 @@
 {
   "characters": [
     {
-      "name": "Monica Moreno",
-      "birthday": "2022-01-05",
+      "name": "Harry Potter",
+      "birthday": "1980-07-31",
       "eyes_color": "Verde",
       "hair_color": "Negro",
-      "photo": {},
+      "photo": "http://hp-api.herokuapp.com/images/harry.jpg",
+      "house": "Gryffindor",
+      "gender": "Hombre",
+      "position": "Estudiante",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 1
+    },
+    {
+      "name": "Hermione Granger",
+      "birthday": "1979-09-19",
+      "eyes_color": "Cafe",
+      "hair_color": "Castaño claro",
+      "photo": "http://hp-api.herokuapp.com/images/hermione.jpeg",
       "house": "Gryffindor",
       "gender": "Mujer",
       "position": "Estudiante",
       "status": "Vivo",
       "favorite": false,
-      "id": 1
+      "id": 2
+    },
+    {
+      "name": "Ron Weasley",
+      "birthday": "1980-03-01",
+      "eyes_color": "Azules",
+      "hair_color": "Pelirojo",
+      "photo": "http://hp-api.herokuapp.com/images/ron.jpg",
+      "house": "Gryffindor",
+      "gender": "Hombre",
+      "position": "Estudiante",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 3
+    },
+    {
+      "name": "Draco Malfoy",
+      "birthday": "1980-06-05",
+      "eyes_color": "Verdes",
+      "hair_color": "Rubio",
+      "photo": "http://hp-api.herokuapp.com/images/draco.jpg",
+      "house": "Slytherin",
+      "gender": "Hombre",
+      "position": "Estudiante",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 4
+    },
+    {
+      "name": "Cedric Diggory",
+      "birthday": "1977-01-26",
+      "eyes_color": "Verdes",
+      "hair_color": "Castaño claro",
+      "photo": "http://hp-api.herokuapp.com/images/cedric.png",
+      "house": "Hufflepuff",
+      "gender": "Hombre",
+      "position": "Estudiante",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 5
+    },
+    {
+      "name": "Cho Chang",
+      "birthday": "1980-02-03",
+      "eyes_color": "Cafe",
+      "hair_color": "Negro",
+      "photo": "http://hp-api.herokuapp.com/images/cho.jpg",
+      "house": "Ravenclaw",
+      "gender": "Mujer",
+      "position": "Estudiante",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 6
+    },
+    {
+      "name": "Minerva McGonagall",
+      "birthday": "1925-10-04",
+      "eyes_color": "Cafe",
+      "hair_color": "Negro",
+      "photo": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
+      "house": "Gryffindor",
+      "gender": "Mujer",
+      "position": "Staff",
+      "status": "Vivo",
+      "favorite": false,
+      "id": 7
+    },
+    {
+      "name": "Severus Snape",
+      "birthday": "1960-01-09",
+      "eyes_color": "Negro",
+      "hair_color": "Negro",
+      "photo": "http://hp-api.herokuapp.com/images/snape.jpg",
+      "house": "Slytherin",
+      "gender": "Hombre",
+      "position": "Staff",
+      "status": "Finado",
+      "favorite": false,
+      "id": 8
     }
   ]
 }

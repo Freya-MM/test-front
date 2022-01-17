@@ -4,14 +4,16 @@ import Filter from "./components/Filter"
 import Character from "./components/Character"
 import Submenu from "./components/Submenu"
 import Modal from "./components/Modal"
-
+import { obtenerFavoritos } from './actions/favoritosActions'
+import { useSelector } from 'react-redux' // UseSelector es para obtener el state de Redux
 
 function App() {
   const [modal, setModal] = useState(false)
   const [characters, setCharacters] = useState([])
   const [positionChara, setPositionChara] = useState('')
   const [filterBtn, setFilterBtn] = useState([])
-  
+  const favoritos = useSelector(state => state.favoritos)
+
 
   useEffect(() => {
     const characterAPI = async () => {
@@ -28,7 +30,7 @@ function App() {
     }
 
     characterAPI()
-  }, [characters])
+  }, [])
 
   useEffect(() => {
     const checkPosition = () => {
@@ -40,7 +42,7 @@ function App() {
     }
     
     checkPosition()
-  }, [positionChara])
+  }, [positionChara, characters])
 
   return (
     <div className='mb-5'>
@@ -57,6 +59,7 @@ function App() {
                   key={character.id}
                   character={character}
                   setPositionChara={setPositionChara}
+                  favoritos={favoritos}
                 />
               ))}
             </div>

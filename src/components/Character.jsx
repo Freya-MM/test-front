@@ -1,8 +1,14 @@
-function Filter({character, setPositionChara}) {
+import { agregarFavorito, eliminarFavorito } from '../actions/favoritosActions'
+import { useDispatch, useSelector } from 'react-redux';
+
+
+function Filter({character, setPositionChara, favoritos}) {
 
   const { name, birthday, eyes_color, hair_color, photo, house, gender, position, status, favorite, id} = character
+
   let color, cardcolor
 
+  const dispatch = useDispatch();
   
 
   const houseColor = () => {
@@ -22,10 +28,12 @@ function Filter({character, setPositionChara}) {
   }
 
   const favoriteCharacter = () => {
-    if(favorite){
-      return <i class="fas fa-bookmark fa-lg"></i>
+
+
+    if( favoritos.favoritos.find(f => f.id == id) ){
+      return <i onClick={ () => dispatch(eliminarFavorito(id)) } className="fas fa-bookmark fa-lg"></i>
     } else {
-      return <i className="far fa-bookmark fa-lg"></i>
+      return <i onClick={ () => dispatch(agregarFavorito(character)) } className="far fa-bookmark fa-lg"></i>
     }
   } 
 
