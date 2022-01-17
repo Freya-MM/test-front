@@ -51,7 +51,7 @@ function Filter({character, setPositionChara, favoritos}) {
     return (
       <div className="card-character col-6 mb-4 mt-lg-4">
           <div className={color}>
-              <div className="character-img"></div>
+              <div style={{ backgroundImage: `url(${photo})` }} className="character-img"></div>
           </div>
           <div className={cardcolor}>
               <div className="card-text">
