@@ -7,7 +7,7 @@ $btn-black: #00000099;
 $gray: #999999;
 $gray-hover: #4e4e4e;
 $gray-tx-desc: #374A59;
-$died-color: #CCCCCC;
+$card2: #CCCCCC;
 $gryffindor: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(254,212,130,1) 100%);
 $slytherin: linear-gradient(90deg, rgba(28,121,43,1) 0%, rgba(130,233,94,1) 100%);
 $ravenclaw: linear-gradient(90deg, rgba(5,151,183,1) 0%, rgba(102,209,255,1) 100%);
@@ -60,11 +60,14 @@ body{
 .slytherin{
     background: $slytherin;
 }
-.ravenclawhupp{
+.ravenclaw{
     background: $ravenclaw;
 }
 .hufflepuff{
     background: $hufflepuff;
+}
+.card2{
+    background-color: $card2!important;
 }
 .card-character{
     .card-image{

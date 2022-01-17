@@ -52,7 +52,7 @@ body {
   background: linear-gradient(90deg, #1c792b 0%, #82e95e 100%);
 }
 
-.ravenclawhupp {
+.ravenclaw {
   background: -webkit-gradient(linear, left top, right top, from(#0597b7), to(#66d1ff));
   background: linear-gradient(90deg, #0597b7 0%, #66d1ff 100%);
 }
@@ -60,6 +60,10 @@ body {
 .hufflepuff {
   background: -webkit-gradient(linear, left top, right top, from(#ffc700), to(#fff388));
   background: linear-gradient(90deg, #ffc700 0%, #fff388 100%);
+}
+
+.card2 {
+  background-color: #CCCCCC !important;
 }
 
 .card-character .card-image {

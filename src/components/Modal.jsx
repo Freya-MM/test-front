@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 
 function Modal({setModal}) {
+    const [selectedFile, setSelectedFile] = useState('');
+
     const newCharaSchema = Yup.object().shape({ 
         name: Yup.string()
                 .min(3, 'El nombre es muy corto')
@@ -17,9 +19,14 @@ function Modal({setModal}) {
                 .required('Dato obligatorio'),  
         photo: Yup.mixed()
                 .required('Por favor agregar foto')
+                .test('fileType', 'Tipo de archivo inválido', function (value) {
+                const SUPPORTED_FORMATS = ['image/jpg', 'image/jpeg', 'image/png']
+                return !value || (value && SUPPORTED_FORMATS.includes(value.type))
+                })
     })
 
     const handleSubmit = async (values) => {
+        console.log(values)
         try {
             const url = 'http://localhost:4000/characters'
 
@@ -57,7 +64,7 @@ function Modal({setModal}) {
                 validationSchema={newCharaSchema}
             >
 
-                {({errors, touched, values, handleChange}) => {
+                {({errors, touched, values, handleChange, setFieldValue}) => {
                     return (
                         <Form>
                             <div className="row">
@@ -141,7 +148,8 @@ function Modal({setModal}) {
                                 </div>
                                 <div className="mt-2 mb-4 col-12">
                                     <label htmlFor="photo" className="form-label text-uppercase">Fotografía</label>
-                                    <Field className="form-control" type="file" id="photo" name="photo" accept="image/png,image/jpeg"/>
+                                    <input className="form-control" type="file" id="photo" name="photo" value={selectedFile} onChange={event => setFieldValue('photo', event.currentTarget.files[0])}
+/>
                                     {errors.photo && touched.photo ? (
                                         <div className='error-feedback'>{errors.photo}</div>
                                     ) : null }
